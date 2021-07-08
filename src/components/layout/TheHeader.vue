@@ -16,6 +16,7 @@
              </li>
              <li v-if="isLoggedIn">
                <base-button @click="logout">Logout</base-button>
+
              </li>
            </ul>
        </nav>
@@ -35,6 +36,7 @@
     methods: {
       logout() {
         this.$store.dispatch('logout');
+        this.$router.replace('/coaches');
       }
     }
 
